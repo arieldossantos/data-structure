@@ -4,19 +4,19 @@ import "fmt"
 
 //Declaração da estrutura de Pilha
 type Pilha struct {
-  topo *Elemento; //define o topo
-  tamanho int; //tamanho da pilha
+  topo *Elemento //define o topo
+  tamanho int //tamanho da pilha
 }
 
 //Declaração do elemento da pilha
 type Elemento struct {
-  valor interface{};//Um tipo interface vazio aceita qualquer tipo de dado
-  proximo *Elemento;//Referencia para o próximo elemento
+  valor interface{}//Um tipo interface vazio aceita qualquer tipo de dado
+  proximo *Elemento//Referencia para o próximo elemento
 }
 
 //Método para retornar o tamanho da pilha
 func (pilha *Pilha) length() int {
-  return pilha.tamanho;
+  return pilha.tamanho
 }
 
 //Método de push na pilha
@@ -26,7 +26,7 @@ func (pilha *Pilha) push(valor interface{}) {
 }
 
 //Método de pop na pilha
-func (pilha *Pilha) pop() bool{
+func (pilha *Pilha) pop() bool {
   if(pilha.tamanho > 0) {
     pilha.topo = pilha.topo.proximo
     pilha.tamanho--
